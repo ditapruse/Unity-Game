@@ -10,7 +10,18 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Wooden_Tower
-  externalObjects: {}
+    6400000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Tower_01
+    second: {fileID: 2100000, guid: b19bce950a922ea4cad65b471fe165b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Tower_02
+    second: {fileID: 2100000, guid: 4ef9cd3e6811fc946a25c7654f4793f9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,7 +54,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
