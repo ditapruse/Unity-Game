@@ -10,7 +10,7 @@ public class GunFire : MonoBehaviour //Rename "Gunfire" to what your script name
         {
             AudioSource gunsound = GetComponent<AudioSource>();
             gunsound.Play();
-            GetComponent<Animation>().Play("Gunshot"); //Rename to what your animation is called
+            GetComponent<Animation>().Play("GunShot"); //Rename to what your animation is called
         }
 
     }
