@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI; //Need this for calling UI scripts
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
 
     [SerializeField]
-    Transform UIPanel; //Will assign our panel to this variable so we can enable/disable it
+    public GameObject UIPanel; //Will assign our panel to this variable so we can enable/disable it
 
     bool isPaused; //Used to determine paused state
 
@@ -28,14 +29,14 @@ public class Manager : MonoBehaviour
     public void Pause()
     {
         isPaused = true;
-        UIPanel.gameObject.SetActive(true); //turn on the pause menu
+        UIPanel.SetActive(true); //turn on the pause menu
         Time.timeScale = 0f; //pause the game
     }
 
     public void UnPause()
     {
         isPaused = false;
-        UIPanel.gameObject.SetActive(false); //turn off pause menu
+        UIPanel.SetActive(false); //turn off pause menu
         Time.timeScale = 1f; //resume game
     }
 
@@ -46,6 +47,6 @@ public class Manager : MonoBehaviour
 
     public void Restart()
     {
-        Application.LoadLevel(0);
+        SceneManager.LoadScene(0);
     }
 }
